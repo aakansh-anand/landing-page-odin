@@ -1,191 +1,544 @@
-* {
-  font-family: "Roboto", sans-serif;
-  margin: 0;
-  padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url(https://db.onlinewebfonts.com/c/fd1ad3a0f95210975d2f5607501020b5?family=Norse);
+@font-face {
+  font-family: "Norse";
+  src: url("https://db.onlinewebfonts.com/t/fd1ad3a0f95210975d2f5607501020b5.eot");
+  src: url("https://db.onlinewebfonts.com/t/fd1ad3a0f95210975d2f5607501020b5.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/fd1ad3a0f95210975d2f5607501020b5.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/fd1ad3a0f95210975d2f5607501020b5.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/fd1ad3a0f95210975d2f5607501020b5.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/fd1ad3a0f95210975d2f5607501020b5.svg#Norse")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-.flex-display { /* Utitity class for flexbox */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+@font-face {
+  font-family: "OnePiece-zAqL.ttf";
+  font-style: normal;
+  font-weight: normal;
+  src: local("OnePiece-zAqL.ttf"),
+    url("/fonts/OnePiece-zAqL.woff") format("woff");
+}
+
+body {
+  background: #000;
+  color: white;
+}
+
+/* HEADER CSS */
+.hero {
+  background-image: linear-gradient(
+      to right,
+      rgba(248, 108, 166, 0.1),
+      rgba(248, 108, 166, 0.3)
+    ),
+    url("./images/header/one-piece.jpg");
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.logo-box {
+  font-size: 4rem;
+  font-weight: 700;
+  padding-top: 1%;
+  font-family: "Norse", sans-serif;
+  animation: slideInFromRight 0.5s ease-in-out;
+  transition: all 0.5s;
+}
+
+.logo-box:hover {
+  color: rgba(248, 108, 166, 0.9);
+  transition: all 0.5s;
 }
 
 .nav {
+  padding: 0 10%;
+  display: flex;
   justify-content: space-between;
-  margin: 0 100px;
 }
 
-.nav-link {
-  gap: 16px;
+.link-box {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.25rem;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.5s;
 }
 
-li {
-  list-style: none;
-}
-
-.header, .footer {
-  background-color: #1f2937;
-  color: #fff;
-}
-
-.logo {
-  padding: 16px 0;
-  font-size: 32px;
-}
-
-.hero {
-  flex-wrap: wrap;
-  flex-basis: calc(750px - 100px);
-  justify-content: space-between;
-  margin: 0 100px;
-}
-
-.nav,
-.hero {
-  width: 70%;
-  margin: auto;
-}
-
-.left-hero,
-.right-hero {
-  margin: 100px;
-  margin-left: 0px;
-  width: calc(500px - 100px);
-}
-
-.right-hero {
-  height: 250px;
-  border-radius: 10px;
-  width: 250;
-}
-
-.left-hero p {
-  font-size: 16px;
-  letter-spacing: 0.5px;
-  margin-top: 16px;
-  color: #d3d3d3;
-}
-
-.left-hero button {
-  padding: 8px 24px 8px 24px;
-  margin-top: 16px;
-  border: none;
-  border-radius: 10px;
-  background-color: #3882f6;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 500;
+.link:hover {
+  color: rgb(248, 108, 166);
   cursor: pointer;
+  transition: all 0.5s;
 }
 
-.left-hero button:hover {
-  background-color: #7aa5f9;
+.main-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+  flex-direction: column;
+  font-size: 5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
 }
 
-.title {
-  font-size: 48px;
-  font-weight: 800;
-}
-
-.right-hero {
-  margin-right: 0;
-  background-color: #5e5e5e;
-}
-
-.information h1 {
+.main-one,
+.main-two {
+  display: block;
   text-align: center;
-  margin: 50px 0;
-  font-size: 36px;
-  color: #1f2937;
+  transition: all 0.5s;
+  font-family: "Norse", sans-serif;
 }
 
-.information .card-collect {
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 60px;
-  margin-bottom: 100px;
+.main-one {
+  animation: slideInFromRight 1.5s ease-in-out;
+}
+
+.main-two {
+  font-size: 3.2rem;
+  letter-spacing: 0.1rem;
+  animation: slideInFromLeft 1.5s ease-in-out;
+}
+
+.main-one:hover,
+.main-two:hover {
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.main-one:hover {
+  transform: translateY(-20px);
+}
+
+.main-two:hover {
+  transform: translateY(20px);
+}
+/* ******************************************************************** */
+/* Information section */
+.info {
+  background-image: linear-gradient(
+      rgba(248, 108, 166, 0.1),
+      rgba(248, 108, 166, 0.6)
+    ),
+    url("./images/info/main.jpg");
+  background-size: cover;
+  background-position: top center;
+  min-height: 100vh;
+}
+
+.info-title {
+  text-align: center;
+  padding-top: 5%;
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgb(247, 149, 165);
+  text-transform: uppercase;
+  font-family: "Norse", sans-serif;
+  letter-spacing: 0.3rem;
+  transition: all 0.5s;
+}
+
+.info-title:hover {
+  color: rgb(250, 114, 239);
+  translate: 0 20px;
+}
+.info-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  padding: 0 10%;
+  gap: 30px;
+  margin-top: 5rem;
 }
 
 .card {
-  width: 175px;
+  width: 250px;
+  height: 320px;
+  margin: 0 auto;
 }
 
-.card p {
-  font-size: 18px;
-  margin-top: 16px;
-  color: #1f2937;
+.card h3 {
+  font-family: "Norse", sans-serif;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 2rem;
+  transition: all 0.5s;
+}
+
+.card:hover {
+  color: rgb(248, 108, 166);
+  transition: all 0.01s;
+}
+
+.first,
+.second,
+.third,
+.fourth {
+  background-size: cover;
+  min-height: 250px;
+  border-radius: 10px;
+  border: 3px solid rgb(248, 108, 166);
+  padding: 15px;
+  text-align: left;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  font-family: cursive;
+  color: transparent;
+}
+
+.first {
+  background-image: url("./images/info/Bifrost.jpeg");
+}
+
+.first:hover {
+  color: white;
+  background-image: linear-gradient(#000000, rgba(0, 0, 0, 0.3)),
+    url("./images/info/Bifrost.jpeg");
+}
+
+.second {
+  background-image: url("./images/info/thor-hammer.jpg");
+}
+
+.second:hover {
+  color: white;
+  background-image: linear-gradient(#000000, rgba(0, 0, 0, 0.3)),
+    url("./images/info/thor-hammer.jpg");
+}
+
+.third {
+  background-image: url("./images/info/odin-gungnir.webp");
+}
+
+.third:hover {
+  color: white;
+  background-image: linear-gradient(#000000, rgba(0, 0, 0, 0.1)),
+    url("./images/info/odin-gungnir.webp");
+}
+
+.fourth {
+  background-image: url("./images/info/loki-screpter.webp");
+}
+
+.fourth:hover {
+  color: white;
+  background-image: linear-gradient(#000000, rgba(0, 0, 0, 0.1)),
+    url("./images/info/loki-screpter.webp");
+}
+
+.first:hover,
+.second:hover,
+.third:hover,
+.fourth:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  transition: all 1s;
+  border: 3px solid transparent;
+}
+/* **************************************************************************** */
+/* Qoute Box */
+.qoute-box {
+  min-height: 50vh;
+  background-image: linear-gradient(
+      rgba(248, 108, 166, 0.5),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url("./images/quote/qoute.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10%;
+}
+
+.qoute-text {
+  font-weight: 500;
+  font-size: 2.4rem;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  margin-top: 10%;
+  background: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 10px;
+  line-height: 3.6rem;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+
+.qoute-text:hover {
+  transform: skewX(-12deg);
+  transition: all 1s;
+}
+
+.thor {
+  text-transform: uppercase;
+  transition: all 0.5s;
+}
+
+.thor:hover {
+  color: rgba(215, 113, 133, 0.6);
+  transition: all 0.5s;
+  font-weight: 700;
+}
+
+.qoute-author {
+  align-self: flex-end;
+  font-weight: 200;
+  text-decoration: underline;
+  font-size: x-large;
+  transition: all 0.5s;
+}
+
+.qoute-author:hover {
+  font-weight: normal;
+  transition: all 0.5s;
+}
+/* **************************************************** */
+.cta {
+  display: flex;
+  min-height: 50vh;
+  background-color: transparent;
+  background: linear-gradient(
+    -120deg,
+    rgba(252, 130, 179, 0.4),
+    rgba(255, 255, 255, 0.2)
+  );
+  flex-direction: row-reverse;
+  padding: 5% 10%;
+}
+.thor-img {
+  height: 300px;
+  border-radius: 50px;
+  display: block;
+  margin-left: auto;
+  transition: all 1s;
+}
+
+.thor-img:hover {
+  transform: scale(110%);
+  transition: all 1s;
+  border-radius: 10px;
+}
+
+.cta-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.cta-text h4 {
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin-bottom: 10px;
+}
+
+.cta-text p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  line-height: 2rem;
+}
+
+.cta-btn {
+  background: rgb(250, 85, 240);
+  color: white;
+  font-size: 16px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  width: 200px;
+  cursor: pointer;
+  animation: slideInFromRight 1s ease-in-out;
+}
+
+.cta-btn:hover {
+  filter: contrast(340%);
+}
+/* **************************************************** */
+/* Footer */
+.footer {
+  background-image: linear-gradient(
+      10deg,
+      rgba(252, 130, 179, 0.7),
+      rgba(0, 0, 0, 0.1)
+    ),
+    url("./images/quote/qoute.jpg");
+  background-position: center;
+  min-height: 20vh;
+  padding: 5% 0;
   text-align: center;
 }
 
-.card .img {
-  box-sizing: border-box;
-  height: 175px;
-  width: 175px;
-  border: 5px solid #3882f6;
-  border-radius: 10px;
+.footer p {
+  color: #eff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  font-family: "Norse";
 }
 
-.information{
-  width: 60%;
-  margin: auto;
+footer p span {
+  font-family: serif;
 }
 
-.testimonial {
-  background-color: #e5e7eb;
-  padding: 100px 100px;
-}
-
-.testimonial-title{
-  margin: auto;
-  font-size: 24px;
-  color: #1f2937;
-  font-weight: 300;
-  font-style: italic;
-  line-height: 1.5;
-  width: 60%;
-}
-
-.author {
-  width: 60%;
-  margin: auto;
-  margin-top: 25px;
-  text-align: right;
-}
-
-.call-to-action {
-  margin: 100px 150px;
-  justify-content: space-between;
-  background-color: #3882f6;
-  color: #f4f4f4;
-  padding: 3% 8%;
-  border-radius: 20px;
-  flex-wrap: wrap;
-}
-
-
-.call-to-action .content h2 {
-  font-weight: 800;
-  margin-bottom: 5px;
-}
-
-.call-to-action button {
-  background-color: #3882f6;
+.footer p a {
   color: #fff;
-  padding: 6px 18px 6px 18px;
-  border: 3px solid #fff;
-  border-radius: 10px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  margin-top: 16px;
-  margin-left: auto;
+  font-family: "Norse", sans-serif;
+}
+/* **************************************************** */
+/* Key Frames */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(5%);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
-.call-to-action button:hover {
-  background-color: #7aa5f9;
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(20%);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(-5%);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* ************************************************** */
+/* Media queries */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  /* header responsive */
+  .logo-box {
+    font-size: 3rem;
+    margin-top: 10%;
+  }
+
+  .link-box {
+    font-size: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  .main-title {
+    margin-top: 50%;
+    font-size: 3.2rem;
+  }
+
+  .main-two {
+    font-size: 2rem;
+  }
+  /* information responsive */
+  .info-title {
+    padding-top: 10%;
+    padding: 10% 10% 0 10%;
+  }
+  /* Quote responsive */
+  .qoute-box {
+    min-height: 50vh;
+    flex-direction: column;
+    padding: 10%;
+  }
+  .qoute-text {
+    font-size: 1.7rem;
+    text-align: left;
+    padding: 10px;
+    line-height: 2.6rem;
+  }
+
+  .qoute-author {
+    font-size: large;
+  }
+  /* Cta reponsive */
+  .cta {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 5% 10%;
+  }
+  .thor-img {
+    width: 250px;
+    display: inline-block;
+    margin: 10% auto;
+  }
+
+  .thor-img:hover {
+    transform: scale(105%);
+  }
+
+  .cta-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .cta-text h4 {
+    font-size: 1.7rem;
+    font-weight: 300;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    margin-bottom: 10px;
+  }
+
+  .cta-text p {
+    margin-top: 10px;
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  .cta-btn {
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 150px;
+  }
+  /* Footer responsive */
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10% 0;
+    text-align: center;
+  }
 }
 
-.footer {
-  padding: 30px;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
 }
 
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}

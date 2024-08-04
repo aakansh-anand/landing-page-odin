@@ -3,91 +3,107 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Odin Landing Page</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <title>Odin Landing page</title>
   </head>
   <body>
-    <header class="header">
-      <nav class="nav flex-display">
-        <h1 class="logo">Logo</h1>
-        <ul class="nav-link flex-display">
-          <li>one</li>
-          <li>two</li>
-          <li>three</li>
+    <!-- ------------------------------------------------------------------ -->
+    <!-- Welcome to Odin Land -->
+    <header class="hero">
+      <nav class="nav">
+        <div class="logo-box">Odin Land</div>
+        <ul class="link-box">
+          <li class="link">One</li>
+          <li class="link">Two</li>
+          <li class="link">Three</li>
         </ul>
       </nav>
-
-      <div class="hero flex-display">
-        <div class="left-hero">
-          <h1 class="title">This website is awesome</h1>
-          <p>
-            This website has some subtext that goes here under the main title.
-            It's a smaller font and lower is lower contrast.
-          </p>
-          <button>Sign up</button>
-        </div>
-        <div class="right-hero flex-display">This is a placeholder for an image</div>
-      </div>
+      <section class="hero-text">
+        <h1 class="main-title">
+          <span class="main-one">The Treasure</span>
+          <span class="main-two">is waiting for you</span>
+        </h1>
+      </section>
     </header>
-
-    <section class="information">
-      <h1>Some Random Information</h1>
-      <div class="card-collect flex-display">
+    <!-- ------------------------------------------------------------------ -->
+    <!-- Odin teasures -->
+    <main class="info">
+      <h2 class="info-title">Welcome to the Odin Land</h2>
+      <div class="info-box">
         <div class="card">
-          <div class="img"></div>
-          <p class="card-text">
-            This is some subtext under an illustration or image
-          </p>
+          <div class="first">
+            Bifrost, in Marvel, is the magical rainbow bridge connecting Asgard
+            to other realms. Guarded by Heimdall
+          </div>
+          <h3>Bifrost</h3>
         </div>
-
         <div class="card">
-          <div class="img"></div>
-          <p class="card-text">
-            This is some subtext under an illustration or image
-          </p>
+          <div class="second">
+            Mjolnir is Thor's enchanted hammer. Only those deemed "worthy" can
+            lift and wield it.
+          </div>
+          <h3>Mjoinir</h3>
         </div>
-
         <div class="card">
-          <div class="img"></div>
-          <p class="card-text">
-            This is some subtext under an illustration or image
-          </p>
+          <div class="third">
+            Gungnir is Odin's spear crafted by dwarves, it symbolizes his
+            authority as All-Father of Asgard. Returns to Odin's hand when
+            thrown.
+          </div>
+          <h3>Gungnir</h3>
         </div>
-
         <div class="card">
-          <div class="img"></div>
-          <p class="card-text">
-            This is some subtext under an illustration or image
-          </p>
+          <div class="fourth">
+            Loki's scepter, a weapon containing the Mind Stone. Given to him by
+            Thanos
+            <br />
+            <br />
+            Destroyed by Tony Stark
+          </div>
+          <h3>Loki's Screpter</h3>
         </div>
       </div>
-    </section>
-
-    <section class="testimonial">
-      <h2 class="testimonial-title">
-        This is an inspiring quote, or a testimonial from a customer. Maybe it's
-        just filling space, or maybe people will actually say nice things about
-        this website. Who Knows? All I know is that it looks nice. XD
-      </h2>
-      <h3 class="author">-Thor, God of Thunder</h3>
-    </section>
-
-    <section class="call-to-action flex-display">
-      <div class="content">
-        <h2 class="cta-title">Call to action! It's time!</h2>
-        <p>Sign up for our product by clicking that button right over there!</p>
+    </main>
+    <!-- ------------------------------------------------------------------ -->
+    <!-- Odin Quote -->
+    <article class="qoute-box">
+      <h3 class="qoute-text">
+        <img
+          src="./images/quote/quote-left.svg"
+          alt=""
+          height="30px"
+          style="margin-bottom: 20px"
+        />
+        Whosoever holds this hammer, if he be worthy, shall possess the power of
+        <span class="thor">Thor</span>
+      </h3>
+      <h4 class="qoute-author">-- Odin, The Divine God</h4>
+    </article>
+    <!-- ------------------------------------------------------------------ -->
+    <!-- Call to action -->
+    <article class="cta">
+      <img src="./images/cta/thor.jpg" alt="thor-looking" class="thor-img" />
+      <div class="cta-box">
+        <div class="cta-text">
+          <h4>
+            Thor asked me whether you like to add this into your marvel
+            collections ?
+          </h4>
+          <hr />
+          <p>
+            This will help him build the Asgard that odin Talked about.
+            <br>
+            Thor will protect you all.
+          </p>
+        </div>
+        <div class="cta-button">
+          <button type="button" class="cta-btn">Get yours</button>
+        </div>
       </div>
-      <button>Sign up</button>
-    </section>
-
-    <footer class="footer flex-display">
-      <div class="footer-text">Copyright &copy Aakansh Anand</div>
+    </article>
+    <footer class="footer">
+      <p>Copyright <span>&copy;</span> <a href="https://github.com/aakansh-anand">Aakansh Anand</a></p>
     </footer>
   </body>
 </html>
